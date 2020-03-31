@@ -12,29 +12,64 @@ alert("Welcome, " + userName + "! It's great to see you. Take this mini quiz and
 //take into consideration case sensitivity --HINT .toUpperCase() or .toLowerCase()
 
 //1. does ashley have a dog? - YES
-//console.log first, later change to alert with response
+//console.log first
 var haveADog = prompt("Does Ashley own a dog?");
 console.log(userName + "'s answer to 'has dog': " + haveADog);
+// alert with response telling them if correct
+if(haveADog === "yes") {
+  alert("That's correct! Her name is Callie");
+}
+else {
+  alert("She actually does have a dog. Her name is Callie.")
+}
 
 //2. does ashley prefer sunny days over rainy days? - YES
-//console.log first, later change to alert with response
+//console.log first
 var sunnyOverRainy = prompt("Does Ashley prefer sunny days over rainy days?");
 console.log(userName + "'s answer to 'sunny over rainy': " + sunnyOverRainy);
+//alert with response telling them if correct
+if(sunnyOverRainy === "yes") {
+  alert("You've got it! She definitely prefers the sunshine.");
+}
+else {
+  alert("Rain, rain, go away, Ashley prefers a sunny day. Let's try this one...");
+}
 
 //3. does ashley do yoga? - NO
-//console.log first, later change to alert with response
+//console.log first
 var doesYoga = prompt("Does Ashley do yoga?");
 console.log(userName + "'s answer to 'does yoga': " + doesYoga);
+// alert with response telling them if correct
+if(doesYoga === "yes") {
+  alert("Nah, she never really got into it, and it still alludes her.");
+}
+else {
+  alert("Correct! She does not really like yoga. There's just something about it...");
+}
 
 //4. does ashley like to kayak? - YES
-//console.log first, later change to alert with response
+//console.log first
 var likeToKayak = prompt("Does Ashley like to kayak?");
 console.log(userName + "'s answer to 'likes to kayak': " + likeToKayak);
+// alert with response telling them if correct
+if(likeToKayak === "yes") {
+  alert("Indeed, and Callie comes with her, too!");
+}
+else {
+  alert("Ashley DOES like to kayak. Callie comes with her, too!");
+}
 
 //5. does ashley like to bake? - NO
-//console.log first, later change to alert with response
+//console.log first
 var likeToBake = prompt("Does Ashley like to bake?");
 console.log(userName + "'s answer to 'likes to bake': " + likeToBake);
+// alert with response telling them if correct
+if(likeToBake === "yes") {
+  alert("She loves to eat baked goods, but she does NOT like to bake much on her own.");
+}
+else {
+  alert("Exactly, she does not like to bake, but she does like to eat baked goods.");
+}
 
 //display the user's name back to them as a final message
-alert("Thank you, " + userName + " for taking Ashley's 'Getting to Know Me' quiz. Check out this page to see how you did!");
+alert("Thank you, " + userName + " for taking Ashley's 'Getting to Know Me' quiz. Check out this page to learn more!");

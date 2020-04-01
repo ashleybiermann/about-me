@@ -13,10 +13,10 @@ alert("Welcome, " + userName + "! It's great to see you. Take this mini quiz and
 
 //1. does ashley have a dog? - YES
 //console.log first
-var haveADog = prompt("Does Ashley own a dog?");
+var haveADog = prompt("Does Ashley own a dog?").toUpperCase();
 console.log(userName + "'s answer to 'has dog': " + haveADog);
 // alert with response telling them if correct
-if(haveADog === "yes") {
+if(haveADog === "YES") {
   alert("That's correct! Her name is Callie");
 }
 else {
@@ -25,10 +25,10 @@ else {
 
 //2. does ashley prefer sunny days over rainy days? - YES
 //console.log first
-var sunnyOverRainy = prompt("Does Ashley prefer sunny days over rainy days?");
+var sunnyOverRainy = prompt("Does Ashley prefer sunny days over rainy days?").toUpperCase();
 console.log(userName + "'s answer to 'sunny over rainy': " + sunnyOverRainy);
 //alert with response telling them if correct
-if(sunnyOverRainy === "yes") {
+if(sunnyOverRainy === "YES") {
   alert("You've got it! She definitely prefers the sunshine.");
 }
 else {
@@ -37,10 +37,10 @@ else {
 
 //3. does ashley do yoga? - NO
 //console.log first
-var doesYoga = prompt("Does Ashley do yoga?");
+var doesYoga = prompt("Does Ashley do yoga?").toUpperCase();
 console.log(userName + "'s answer to 'does yoga': " + doesYoga);
 // alert with response telling them if correct
-if(doesYoga === "yes") {
+if(doesYoga === "YES") {
   alert("Nah, she never really got into it, and it still alludes her.");
 }
 else {
@@ -49,10 +49,10 @@ else {
 
 //4. does ashley like to kayak? - YES
 //console.log first
-var likeToKayak = prompt("Does Ashley like to kayak?");
+var likeToKayak = prompt("Does Ashley like to kayak?").toUpperCase();
 console.log(userName + "'s answer to 'likes to kayak': " + likeToKayak);
 // alert with response telling them if correct
-if(likeToKayak === "yes") {
+if(likeToKayak === "YES") {
   alert("Indeed, and Callie comes with her, too!");
 }
 else {
@@ -61,10 +61,10 @@ else {
 
 //5. does ashley like to bake? - NO
 //console.log first
-var likeToBake = prompt("Does Ashley like to bake?");
+var likeToBake = prompt("Does Ashley like to bake?").toUpperCase();
 console.log(userName + "'s answer to 'likes to bake': " + likeToBake);
 // alert with response telling them if correct
-if(likeToBake === "yes") {
+if(likeToBake === "YES") {
   alert("She loves to eat baked goods, but she does NOT like to bake much on her own.");
 }
 else {

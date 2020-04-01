@@ -1,0 +1,8 @@
+body {
+  background-color:rgba(253, 153, 60, 0.877);
+}
+
+img {
+  max-width: 50%;
+  border-radius: 8px;
+}

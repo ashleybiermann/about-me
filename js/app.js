@@ -18,8 +18,7 @@ console.log(userName + "'s answer to 'has dog': " + haveADog);
 // alert with response telling them if correct
 if(haveADog === "YES") {
   alert("That's correct! Her name is Callie");
-}
-else {
+} else {
   alert("She actually does have a dog. Her name is Callie.")
 }
 
@@ -30,8 +29,7 @@ console.log(userName + "'s answer to 'sunny over rainy': " + sunnyOverRainy);
 //alert with response telling them if correct
 if(sunnyOverRainy === "YES") {
   alert("You've got it! She definitely prefers the sunshine.");
-}
-else {
+} else {
   alert("Rain, rain, go away, Ashley prefers a sunny day. Let's try this one...");
 }
 
@@ -42,8 +40,7 @@ console.log(userName + "'s answer to 'does yoga': " + doesYoga);
 // alert with response telling them if correct
 if(doesYoga === "YES") {
   alert("Nah, she never really got into it, and it still alludes her.");
-}
-else {
+} else {
   alert("Correct! She does not really like yoga. There's just something about it...");
 }
 
@@ -54,8 +51,7 @@ console.log(userName + "'s answer to 'likes to kayak': " + likeToKayak);
 // alert with response telling them if correct
 if(likeToKayak === "YES") {
   alert("Indeed, and Callie comes with her, too!");
-}
-else {
+} else {
   alert("Ashley DOES like to kayak. Callie comes with her, too!");
 }
 
@@ -66,10 +62,46 @@ console.log(userName + "'s answer to 'likes to bake': " + likeToBake);
 // alert with response telling them if correct
 if(likeToBake === "YES") {
   alert("She loves to eat baked goods, but she does NOT like to bake much on her own.");
-}
-else {
+} else {
   alert("Exactly, she does not like to bake, but she does like to eat baked goods.");
 }
+
+//Add another question, number guessing game
+//6. correct answer is 4
+
+
+//need to add a LOOP here to give 4 attempts at user guessing before giving them the right answer... assuming they didnt get it. 
+
+    // for(var i; i < 4; i++) { 
+    //   if(favNumGuess < ashleysFavNum)
+
+// switch?
+
+var ashleysFavNum = 4;
+
+
+for(var i = 0; i < 4; i++) {
+  var favNumGuess = prompt("What is Ashley's favorite number? Hint: It's between 1 and 10.");
+  console.log(userName + "'s guess to favorite number: " + favNumGuess);
+  if(favNumGuess == ashleysFavNum) {
+    (alert("Correct! Her favorite number IS 4!"))
+    break;
+    //need to break free of the loop early!
+    } else if(favNumGuess < ashleysFavNum) {
+        alert("Too low, try a higher number.");
+    } else {
+        alert("Too high, try a hower number.");
+    }
+}
+
+
+
+
+// add question - user guesses to a question with multiple answers
+
+
+
+
 
 //display the user's name back to them as a final message
 alert("Thank you, " + userName + " for taking Ashley's 'Getting to Know Me' quiz. Check out this page to learn more!");

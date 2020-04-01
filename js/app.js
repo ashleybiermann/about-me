@@ -69,39 +69,28 @@ if(likeToBake === "YES") {
 //Add another question, number guessing game
 //6. correct answer is 4
 
-
-//need to add a LOOP here to give 4 attempts at user guessing before giving them the right answer... assuming they didnt get it. 
-
-    // for(var i; i < 4; i++) { 
-    //   if(favNumGuess < ashleysFavNum)
-
-// switch?
-
 var ashleysFavNum = 4;
 
-
 for(var i = 0; i < 4; i++) {
+  //Bade helped me figure out to put the prompt inside of the for loop
   var favNumGuess = prompt("What is Ashley's favorite number? Hint: It's between 1 and 10.");
-  console.log(userName + "'s guess to favorite number: " + favNumGuess);
+  console.log(userName + "'s " + "number " + (i+1) + "guess: " + favNumGuess);
   if(favNumGuess == ashleysFavNum) {
     (alert("Correct! Her favorite number IS 4!"))
-    break;
-    //need to break free of the loop early!
+    break; //breaking free of the loop once they got it right
     } else if(favNumGuess < ashleysFavNum) {
         alert("Too low, try a higher number.");
     } else {
-        alert("Too high, try a hower number.");
+        alert("Too high, try a lower number.");
     }
+  }
+
+//Mason helped me figure out how to make the code ignore this line if the user guessed right
+if(favNumGuess != 4) {
+  alert("That's enough guessing for one day... her favorite number is 4.");
 }
 
-
-
-
 // add question - user guesses to a question with multiple answers
-
-
-
-
 
 //display the user's name back to them as a final message
 alert("Thank you, " + userName + " for taking Ashley's 'Getting to Know Me' quiz. Check out this page to learn more!");

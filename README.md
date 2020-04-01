@@ -19,3 +19,6 @@
   - guesses end with *correct* answer or *run out of guesses*
     - then displays all possible correct answers
   - **loop**
+
+- Lets user know **final score**
+  - Keeps track of *total correct* answers, then tell user final score

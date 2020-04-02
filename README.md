@@ -1,5 +1,15 @@
 # about-me
 
+##Day 1
+
+### Features Added
+- created new project with HTML, CSS, and JS files
+- **"About Me Guessing Game"** contains 5 **prompt** questions 
+  - uses .toUpperCase() or .toLowerCase() *requires* 'yes' or 'no' answers
+  - lets user know if they are right or wrong
+  - console.log() utilized to assist dev
+  - Gets *user's name*, greets user, and displays a "thank you for playing" message at conclusion
+  
 ##Day 2 Updates
 
 ### Features Added

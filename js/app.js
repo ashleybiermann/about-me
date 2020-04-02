@@ -19,8 +19,6 @@ var correctAnswers = 0;
 >> 4th parameter: responseToNo
 */
 
-
-
 function askQuestion(question, rightAnswer, responseToCorrect, responseToWrong) {
   // F2 to rename all variables to the same name
   var usersResponse = prompt(question).toUpperCase();
@@ -48,47 +46,10 @@ function askQuestion(question, rightAnswer, responseToCorrect, responseToWrong) 
   }
 }
 
+// function calls
 askQuestion("Does Ashley own a dog?", true, "That's correct! Her name is Callie", "She actually does have a dog. Her name is Callie.");
-// askQuestion("Does Ashley prefer sunny days over rainy days?", true);
-
-//1. does ashley have a dog? - YES
-//console.log first
-// var haveADog = prompt("Does Ashley own a dog?").toUpperCase();
-// console.log(userName + "'s answer to 'has dog': " + haveADog);
-// // alert with response telling them if correct
-// if(haveADog === "YES") {
-//   alert("That's correct! Her name is Callie");
-//   correctAnswers++;
-//   console.log('correct dog answer! total correct answers: ' + correctAnswers);
-// } else {
-//   alert("She actually does have a dog. Her name is Callie.")
-// }
-
-//2. does ashley prefer sunny days over rainy days? - YES
-//console.log first
-var sunnyOverRainy = prompt("Does Ashley prefer sunny days over rainy days?").toUpperCase();
-console.log(userName + "'s answer to 'sunny over rainy': " + sunnyOverRainy);
-//alert with response telling them if correct
-if(sunnyOverRainy === "YES") {
-  alert("You've got it! She definitely prefers the sunshine.");
-  correctAnswers++;
-  console.log('correct sunny answer! total correct answers: ' + correctAnswers);
-} else {
-  alert("Rain, rain, go away, Ashley prefers a sunny day. Let's try this one...");
-}
-
-//3. does ashley do yoga? - NO
-//console.log first
-var doesYoga = prompt("Does Ashley do yoga?").toUpperCase();
-console.log(userName + "'s answer to 'does yoga': " + doesYoga);
-// alert with response telling them if correct
-if(doesYoga === "YES") {
-  alert("Nah, she never really got into it, and it still alludes her.");
-} else {
-  alert("Correct! She does not really like yoga. There's just something about it...");
-  correctAnswers++;
-  console.log('correct yoga answer! total correct answers: ' + correctAnswers);
-}
+askQuestion("Does Ashley prefer sunny days over rainy days?", true, "You've got it! She definitely prefers the sunshine.", "Rain, rain, go away, Ashley prefers a sunny day. Let's try this one...");
+askQuestion("Does Ashley do yoga?", false, "Correct! She does not really like yoga. There's just something about it...", "Nah, she never really got into it, and it still alludes her.");
 
 //4. does ashley like to kayak? - YES
 //console.log first

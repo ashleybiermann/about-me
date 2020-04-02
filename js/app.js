@@ -107,13 +107,17 @@ function guessNumberGame(ashleysFavNum) {
 function figureOutState() {
   var ashleysStates = ['Michigan', 'Washington'];
 
-  for(var i = 0; i < 6; i++) {
-    var stateGuess = prompt('Ashley has lived in two states. Try to guess one!');
-    console.log(userName + "'s state guess: " + stateGuess);
-    if(stateGuess === ashleysStates[0] || stateGuess === ashleysStates[1]) {
-      alert('Correct! She has lived in TWO states, though: ' + ashleysStates[0] + " and " + ashleysStates[1]);
-      correctAnswers++;
-      console.log('correct state answer! total correct answers: ' + correctAnswers);
+for(var guesses = 0; guesses < 6; guesses++) {
+  
+  var stateGuess = prompt('Ashley has lived in two states. Try to guess one!');
+  console.log(userName + "'s state guess: " + stateGuess);
+  // TODO: reference multipe states - use a new variable FLAG 
+  // TODO: adjust states capitalization... maybe changes the alert message
+  var theyWereRight = false;
+
+  for (var stateIndex = 0; stateIndex < ashleysStates.length; stateIndex++) {
+    if(stateGuess === ashleysStates[stateIndex]) {
+      theyWereRight = true;
       break;
     }
     else {
@@ -126,8 +130,6 @@ function figureOutState() {
   }
 }
 
-
-  
 //display the user's name back to them as a final message
 function finalMessage() {
   alert('Thank you, ' + userName + 'for taking Ashley\'s \'Getting to Know Me\' quiz. You got ' + correctAnswers + ' answers correct out of 7. Check out this page to learn more!');

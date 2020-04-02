@@ -1,4 +1,4 @@
-'use strict';
+ 'use strict';
 
 //greet the user and ask for their name
 //display their name back
@@ -10,18 +10,59 @@ alert("Welcome, " + userName + "! It's great to see you. Take this mini quiz and
 //take into consideration case sensitivity --HINT .toUpperCase() or .toLowerCase()
 var correctAnswers = 0;
 
+/* NOTES
+>> Create a function 'askQuestion'
+>> What's different? The questions, the responses, the correct answers.
+>> 1st parameter: string, question
+>> 2nd parameter: boolean, rightAnswer -> boolean saying whether yes or no is correct answer
+>> 3rd parameter: responseToYes 
+>> 4th parameter: responseToNo
+*/
+
+
+
+function askQuestion(question, rightAnswer, responseToCorrect, responseToWrong) {
+  // F2 to rename all variables to the same name
+  var usersResponse = prompt(question).toUpperCase();
+
+  if(rightAnswer === true) {
+
+    if(usersResponse === 'YES') {
+      alert(responseToCorrect);
+      correctAnswers++;
+      console.log('correct dog answer! total correct answers: ' + correctAnswers);
+    } else {
+      alert(responseToWrong);
+    }
+
+  } else if(rightAnswer === false) {
+
+    if(usersResponse === 'YES') {
+      alert(responseToWrong);
+    } else {
+      alert(responseToCorrect);
+      correctAnswers++;
+      console.log('correct dog answer! total correct answers: ' + correctAnswers);
+    }
+
+  }
+}
+
+askQuestion("Does Ashley own a dog?", true, "That's correct! Her name is Callie", "She actually does have a dog. Her name is Callie.");
+// askQuestion("Does Ashley prefer sunny days over rainy days?", true);
+
 //1. does ashley have a dog? - YES
 //console.log first
-var haveADog = prompt("Does Ashley own a dog?").toUpperCase();
-console.log(userName + "'s answer to 'has dog': " + haveADog);
-// alert with response telling them if correct
-if(haveADog === "YES") {
-  alert("That's correct! Her name is Callie");
-  correctAnswers++;
-  console.log('correct dog answer! total correct answers: ' + correctAnswers);
-} else {
-  alert("She actually does have a dog. Her name is Callie.")
-}
+// var haveADog = prompt("Does Ashley own a dog?").toUpperCase();
+// console.log(userName + "'s answer to 'has dog': " + haveADog);
+// // alert with response telling them if correct
+// if(haveADog === "YES") {
+//   alert("That's correct! Her name is Callie");
+//   correctAnswers++;
+//   console.log('correct dog answer! total correct answers: ' + correctAnswers);
+// } else {
+//   alert("She actually does have a dog. Her name is Callie.")
+// }
 
 //2. does ashley prefer sunny days over rainy days? - YES
 //console.log first
@@ -123,4 +164,9 @@ if(stateGuess !== ashleysStates[0] || stateGuess !== ashleysStates[1]) {
 }
   
 //display the user's name back to them as a final message
-alert('Thank you, ' + userName + 'for taking Ashley\'s \'Getting to Know Me\' quiz. You got ' + correctAnswers + ' answers correct out of 7. Check out this page to learn more!');
+function finalMessage() {
+  alert('Thank you, ' + userName + 'for taking Ashley\'s \'Getting to Know Me\' quiz. You got ' + correctAnswers + ' answers correct out of 7. Check out this page to learn more!');
+}
+
+// functions
+finalMessage();

@@ -1,5 +1,13 @@
+nav
+  >ul
+    >li {
+      display: inline;
+    }
+
 body {
   background-color:rgba(253, 153, 60, 0.877);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(56, 6, 27);
 }
 
 img {

@@ -92,5 +92,27 @@ if(favNumGuess != 4) {
 
 // add question - user guesses to a question with multiple answers
 
+// for(var i = 0; i < 6; i++) {}
+
+var ashleysStates = ['michigan', 'washington'];
+
+  for(var i = 0; i < 6; i++) {
+    var stateGuess = prompt('Ashley has lived in two states. Try to guess one!');
+    console.log(userName + "'s state guess: " + stateGuess);
+    if(stateGuess === ashleysStates[0] || stateGuess === ashleysStates[1]) {
+      alert('Correct! She has lived in TWO states, though: ' + ashleysStates[0] + " and " + ashleysStates[1]);
+      break;
+    }
+    else {
+      alert('Cool state! But Ashley hasn\'t lived there. Try again.');
+    }
+  }  
+
+
+
+
+
+
+  
 //display the user's name back to them as a final message
 alert("Thank you, " + userName + " for taking Ashley's 'Getting to Know Me' quiz. Check out this page to learn more!");

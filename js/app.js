@@ -75,11 +75,9 @@ function figureOutState() {
   for(var guesses = 0; guesses < 6; guesses++) {
     var stateGuess = prompt('Ashley has lived in two states. Try to guess one!');
     console.log(userName + '\'s state guess: ' + stateGuess);
-    // TODO: reference multipe states - use a new variable FLAG
     // TODO: adjust states capitalization... maybe changes the alert message
     // TODO: remove the hard coding references in the array
     var theyWereRight = false;
-
     for (var stateIndex = 0; stateIndex < ashleysStates.length; stateIndex++) {
       if(stateGuess === ashleysStates[stateIndex]) {
         theyWereRight = true;

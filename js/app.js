@@ -85,6 +85,7 @@ function figureOutState() {
     }
     if(theyWereRight) {
       alert('Correct! The two states Ashley has lived in are: ' + ashleysStates[0] + ' and ' + ashleysStates[1]);
+      correctAnswers++;
       break;
     } else if (guesses === 5) {
       alert('That\'s enough guessing for today. The two states Ashley has lived in are: ' + ashleysStates[0] + ' and ' + ashleysStates[1]);
@@ -96,7 +97,7 @@ function figureOutState() {
 
 //display the user's name back to them as a final message
 function finalMessage() {
-  alert('Thank you, ' + userName + 'for taking Ashley\'s \'Getting to Know Me\' quiz. You got ' + correctAnswers + ' answers correct out of 7. Check out this page to learn more!');
+  alert('Thank you, ' + userName + ', for taking Ashley\'s \'Getting to Know Me\' quiz. You got ' + correctAnswers + ' answers correct out of 7. Check out this page to learn more!');
 }
 
 // function calls

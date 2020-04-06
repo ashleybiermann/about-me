@@ -1,10 +1,14 @@
+nav {
+  background-color:rgba(220, 20, 60, 0.329);
+  border-style: none none double none;
+  padding: 2px;
+}
+
 nav
   >ul
     >li {
       /*puts nav bar in horizontal row instead of vertical column*/
-      display: inline;
-      background-color: rgba(220, 20, 60, 0.329);
-      border-style: none none double none;
+      display: inline-block; 
       padding-right: 10px;
       padding-bottom: 15px;
       padding-left: 10px;
@@ -12,6 +16,7 @@ nav
 
 .top-nav {
   color: rgb(56, 6, 50);
+  font-size: 18px;
 }
 
 body {

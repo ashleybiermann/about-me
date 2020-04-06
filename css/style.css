@@ -11,6 +11,8 @@ body {
 }
 
 img {
-  max-width: 50%;
+  float: left;
+  width: 300px;
+  margin-right: 20px;
   border-radius: 8px;
 }

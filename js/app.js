@@ -20,7 +20,6 @@ var correctAnswers = 0;
 */
 
 function askQuestion(question, rightAnswer, responseToCorrect, responseToWrong) {
-  // F2 to rename all variables to the same name
   var usersResponse = prompt(question).toUpperCase();
 
   if(rightAnswer === true) {
@@ -46,26 +45,25 @@ function askQuestion(question, rightAnswer, responseToCorrect, responseToWrong) 
 }
 
 //6. number guessing game with 4 chances to get it right
-//TODO: refactor ashleysFavNum to represent a number she is thinking of
-function guessNumberGame(ashleysFavNum) {
+function guessNumberGame(numThinkingOf) {
   for(var i = 0; i < 4; i++) {
     //Bade helped me figure out to put the prompt inside of the for loop
     var favNumGuess = prompt('Ashley\'s thinking of a number. You have 4 chances to guess what it is!');
     console.log(userName + '\'s ' + 'number ' + (i+1) + 'guess: ' + favNumGuess);
-    if(favNumGuess == ashleysFavNum) {
-      alert('Correct! She was thinking of ' + ashleysFavNum + '!');
+    if(favNumGuess == numThinkingOf) {
+      alert('Correct! She was thinking of ' + numThinkingOf + '!');
       correctAnswers++;
       console.log('correct number guess answer! total correct answers: ' + correctAnswers);
       break;
-    } else if(favNumGuess < ashleysFavNum) {
+    } else if(favNumGuess < numThinkingOf) {
       alert('Too low, try a higher number.');
     } else {
       alert('Too high, try a lower number.');
     }
   }
   //Mason helped me figure out how to make the code ignore this line if the user guessed right
-  if(favNumGuess != ashleysFavNum) {
-    alert('That\'s enough guessing for one day... she was thinking of ' + ashleysFavNum);
+  if(favNumGuess != numThinkingOf) {
+    alert('That\'s enough guessing for one day... she was thinking of ' + numThinkingOf);
   }
 }
 
@@ -73,9 +71,9 @@ function guessNumberGame(ashleysFavNum) {
 function figureOutState() {
   var ashleysStates = ['Michigan', 'Washington'];
   for(var guesses = 0; guesses < 6; guesses++) {
-    var stateGuess = prompt('Ashley has lived in two states. Try to guess one!');
+    var stateGuess = prompt('Ashley has lived in ' + ashleysStates.length + ' states. Try to guess one!');
     console.log(userName + '\'s state guess: ' + stateGuess);
-    // TODO: adjust states capitalization... maybe changes the alert message
+    // TODO: adjust need for correct capitalization
     // TODO: remove the hard coding references in the array
     var theyWereRight = false;
     for (var stateIndex = 0; stateIndex < ashleysStates.length; stateIndex++) {
@@ -84,7 +82,7 @@ function figureOutState() {
       }
     }
     if(theyWereRight) {
-      alert('Correct! The two states Ashley has lived in are: ' + ashleysStates[0] + ' and ' + ashleysStates[1]);
+      alert('Correct! The ' + ashleysStates.length + ' states Ashley has lived in are: ' + ashleysStates[0] + ' and ' + ashleysStates[1]);
       correctAnswers++;
       break;
     } else if (guesses === 5) {
